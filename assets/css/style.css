@@ -1,10 +1,13 @@
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+/* Global Styles */
 html,
 body {
   font-family: 'Poppins', sans-serif;
 }
 
+/* Placeholder Image */
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -13,12 +16,14 @@ body {
   user-select: none;
 }
 
+/* Media Query for Large Devices */
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
 }
 
+/* Divider Styles */
 .b-example-divider {
   width: 100%;
   height: 3rem;
@@ -28,17 +33,20 @@ body {
   box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
 }
 
+/* Vertical Divider */
 .b-example-vr {
   flex-shrink: 0;
   width: 1.5rem;
   height: 100vh;
 }
 
+/* Icon Styles */
 .bi {
   vertical-align: -.125em;
   fill: currentColor;
 }
 
+/* Navigation Scroller */
 .nav-scroller {
   position: relative;
   z-index: 2;
@@ -57,10 +65,10 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+/* Button Styles */
 .btn-bd-primary {
   --bd-blue-bg: #0d6efd;
   --bd-blue-rgb: 13, 110, 253;
-
   --bs-btn-font-weight: 600;
   --bs-btn-color: var(--bs-white);
   --bs-btn-bg: var(--bd-blue-bg);
@@ -74,6 +82,11 @@ body {
   --bs-btn-active-border-color: #0a58ca;
 }
 
+.btn-bd-primary::after {
+  display: none !important;
+}
+
+/* Mode Toggle */
 .bd-mode-toggle {
   z-index: 1500;
 }
@@ -82,6 +95,7 @@ body {
   display: block !important;
 }
 
+/* Hero Section Styles */
 #heroSection {
   display: flex;
   justify-content: center;
@@ -96,24 +110,29 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-image: url("../img/other/bg-hero-section.svg");
   background-size: cover;
   background-position: center;
   z-index: -999;
 }
 
-.custom-carousel-icon {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  font-size: 28px;
+.hero-img {
+  height: 100%;
+  width: 100%;
 }
 
-.pointer {
-  cursor: pointer;
+/* Text Color for Hero Section on Large Devices */
+@media (min-width: 992px) {
+  .hero-text {
+    color: white;
+  }
+
+  .w-lg-50 {
+    width: 50% !important;
+  }
 }
 
-@media (max-width: 768px) {
+/* Responsive Layout for Items */
+@media(max-width: 992px) {
   .order-items-1 {
     order: 2;
   }
@@ -122,8 +141,46 @@ body {
     order: 1;
   }
 
+  .hero-img {
+    height: 300px;
+    width: 280px;
+  }
+}
+
+/* Custom Carousel Icon */
+.custom-carousel-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 28px;
+}
+
+/* Pointer Cursor */
+.pointer {
+  cursor: pointer;
+}
+
+/* Custom Card Image */
+.custom-card-img-top {
+  height: 300px;
+  width: 100%;
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+  .custom-carousel-card-img-top {
+    height: 300px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
   .custom-card-img {
     height: 300px;
+    width: 100%;
+  }
+
+  .custom-card-img-top {
+    height: 400px;
     width: 100%;
   }
 }
